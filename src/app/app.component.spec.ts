@@ -2,13 +2,15 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
 import { MakeComponent } from './components/make/make.component';
+import { ModelComponent } from './components/model/model.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MakeComponent
+        MakeComponent,
+        ModelComponent
       ],
     }).compileComponents();
   }));

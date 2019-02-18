@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MakeComponent } from './make.component';
+import { ModelComponent } from '../model/model.component';
+import { Make } from '../../model/Make';
 
 describe('MakeComponent', () => {
   let component: MakeComponent;
@@ -8,7 +10,7 @@ describe('MakeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MakeComponent ]
+      declarations: [ MakeComponent , ModelComponent]
     })
     .compileComponents();
   }));
@@ -16,7 +18,7 @@ describe('MakeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MakeComponent);
     component = fixture.componentInstance;
-    component.make = { name: 'myMake', models: [] };
+    component.make = {name: 'myMake', models :[]}
     fixture.detectChanges();
   });
 
@@ -24,7 +26,7 @@ describe('MakeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render name in a p tag', async(() => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).toContain('myMake');
