@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MakeComponent } from './components/make/make.component';
 import { ModelComponent } from './components/model/model.component';
 import { ShowComponent } from './components/show/show.component';
+import { TransformService } from './services/transform.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ShowComponent } from './components/show/show.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    TransformService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

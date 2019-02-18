@@ -26,3 +26,12 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+ideally the unit tests should mock the other components.
+ideally protractor tests should do end to end testing.
+
+
+//install test server
+npm install -g json-server
+//run server in server folder
+json-server --watch db.json
