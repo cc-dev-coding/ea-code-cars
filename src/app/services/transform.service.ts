@@ -16,10 +16,10 @@ export class TransformService {
       if(show.cars) {
         show.cars.forEach(car => {
           const makeKey = car.make;
-          if (!carMakeMap.has(makeKey){
+          if (!carMakeMap.has(makeKey)){
             carMakeMap.set(makeKey, new Make(makeKey))
           }
-          const modelMapKey = car.model;
+          const modelMapKey = car.make + car.model;// cater for same model name by different makes
           if (!carModelMap.has(modelMapKey)) {
             carModelMap.set(modelMapKey, new Model(car.model));
             carMakeMap.get(car.make).models.push(carModelMap.get(modelMapKey))

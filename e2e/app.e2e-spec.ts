@@ -7,8 +7,14 @@ describe('cars App', () => {
     page = new CarsPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display header message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getHeading()).toEqual('Energy Australia Coding Test');
   });
+
+  it('should display subheader message', () => {
+    page.navigateTo();
+    expect(page.getSubHeading()).toEqual('Cars participation in car shows');
+  });
+
 });

@@ -4,6 +4,9 @@ import { AppComponent } from './app.component';
 import { MakeComponent } from './components/make/make.component';
 import { ModelComponent } from './components/model/model.component';
 import { ShowComponent } from './components/show/show.component';
+import { CarshowService } from './services/carshow.service';
+import { TransformService } from './services/transform.service';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 
 describe('AppComponent', () => {
@@ -14,6 +17,12 @@ describe('AppComponent', () => {
         MakeComponent,
         ModelComponent,
         ShowComponent
+      ],
+      providers: [
+        TransformService,
+        CarshowService,
+        HttpClient,
+        HttpHandler
       ],
     }).compileComponents();
   }));

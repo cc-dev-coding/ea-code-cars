@@ -5,7 +5,12 @@ export class CarsPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  getHeading() {
     return element(by.css('app-root h1')).getText();
   }
+
+  getSubHeading() {
+    return element(by.css('app-root h2')).getText();
+  }
+
 }
