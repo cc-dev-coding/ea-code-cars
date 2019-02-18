@@ -3,6 +3,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MakeComponent } from './components/make/make.component';
 import { ModelComponent } from './components/model/model.component';
+import { ShowComponent } from './components/show/show.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -10,7 +12,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MakeComponent,
-        ModelComponent
+        ModelComponent,
+        ShowComponent
       ],
     }).compileComponents();
   }));

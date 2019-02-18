@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MakeComponent } from './make.component';
 import { ModelComponent } from '../model/model.component';
+import { ShowComponent } from '../show/show.component';
+
 import { Make } from '../../model/Make';
 
 describe('MakeComponent', () => {
@@ -10,7 +12,7 @@ describe('MakeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MakeComponent , ModelComponent]
+      declarations: [ MakeComponent , ModelComponent, ShowComponent]
     })
     .compileComponents();
   }));

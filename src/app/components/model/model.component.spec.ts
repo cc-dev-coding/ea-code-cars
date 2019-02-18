@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModelComponent } from './model.component';
+import { ShowComponent } from '../show/show.component';
 
 describe('ModelComponent', () => {
   let component: ModelComponent;
@@ -8,7 +9,7 @@ describe('ModelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModelComponent ]
+      declarations: [ ModelComponent, ShowComponent]
     })
     .compileComponents();
   }));
@@ -24,7 +25,7 @@ describe('ModelComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render model name in a <p>> tag', async(() => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).toContain('myModel');
