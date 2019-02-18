@@ -6,5 +6,5 @@
 </div>
 <div style="text-align:left">
   <h2>{{subtitle}}</h2>
-  <app-make *ngFor="let make of makes" [make]="make"></app-make>
+  <app-make *ngFor="let make of getMakes()" [make]="make"></app-make>
 </div>

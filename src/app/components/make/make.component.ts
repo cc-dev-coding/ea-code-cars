@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Make } from '../../model/Make';
+import * as lodash from 'lodash';
+
 
 @Component({
   selector: 'app-make',
@@ -13,6 +15,7 @@ export class MakeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.make.models = lodash.orderBy(this.make.models, ['name'], ['asc']);
   }
 
 }

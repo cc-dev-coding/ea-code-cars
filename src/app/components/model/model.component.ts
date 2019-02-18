@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Model } from '../../model/Model';
+import * as lodash from 'lodash';
 
 @Component({
   selector: 'app-model',
@@ -13,6 +14,7 @@ export class ModelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.model.shows = lodash.orderBy (this.model.shows, ['name'], ['asc']);
   }
 
 }
