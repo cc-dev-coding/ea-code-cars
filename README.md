@@ -35,3 +35,8 @@ ideally protractor tests should do end to end testing.
 npm install -g json-server
 //run server in server folder
 json-server --watch db.json
+
+
+end to end tests are run assuming the mock backend server is running on http://localhost:3000
+use following command to start mock server. for it to run, should be in the 'server' folder in this project.
+

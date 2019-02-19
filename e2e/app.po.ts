@@ -13,4 +13,16 @@ export class CarsPage {
     return element(by.css('app-root h2')).getText();
   }
 
+  getFirstMake() {
+    return element(by.css('p.make')).getText();
+  }
+
+  getFirstModel() {
+    return element(by.css('p.model')).getText();
+  }
+
+  getFirstShow() {
+    return element(by.css('p.show')).getText();
+  }
+
 }
